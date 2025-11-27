@@ -1,0 +1,200 @@
+/* style.css : Italian Wine Bar ChibaTech 共通デザイン */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #f4f0e8;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wrapper {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ヘッダー＆ロゴ */
+header {
+  display: flex;
+  align-items: center;        /* 縦方向の中央揃え */
+  padding: 16px 20px;
+  background-color: #4b0010;  /* ワインレッド */
+  color: #ffffff;
+}
+
+/* ロゴ画像 */
+header img {
+  height: 60px;               /* Safariで大きくなりすぎないように少し小さめに固定 */
+  width: auto;
+  margin-right: 20px;
+  flex-shrink: 0;             /* 画像がつぶれないように */
+}
+
+/* タイトル＋キャッチをまとめて中央に揃える */
+header > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* ロゴの高さの真ん中あたりに来るように */
+}
+
+/* 店名 */
+.site-title {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+/* キャッチコピー */
+header p.catch {
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+
+.site-title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+}
+
+header p.catch {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+/* ナビゲーション */
+nav {
+  background-color: #800020; /* 濃いワインレッド */
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  flex: 1;
+}
+
+nav a {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav a:hover {
+  background-color: #b03040;
+}
+
+/* メイン２カラムレイアウト */
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+article {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background-color: #f7e8e8;
+  padding: 15px;
+}
+
+/* セクション共通 */
+section {
+  margin-bottom: 24px;
+}
+
+section h2 {
+  font-size: 22px;
+  border-bottom: 3px solid #800020;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* サイドバー */
+aside h3 {
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 2px solid #800020;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+aside p {
+  font-size: 14px;
+}
+
+/* フッタ */
+footer {
+  background-color: #4b0010;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* 画像 */
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* メニュー表 */
+table.menu {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table.menu th,
+table.menu td {
+  border-bottom: 1px solid #dddddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+table.menu th {
+  background-color: #f9ecec;
+  text-align: left;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+  #wrapper {
+    width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    flex: 1 0 50%;
+  }
+}
